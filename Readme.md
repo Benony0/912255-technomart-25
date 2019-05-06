@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Стас Ганиев](https://up.htmlacademy.ru/htmlcss/25/user/912255).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Шебельников](https://htmlacademy.ru/profile/hulkaton).
 
 ---
 
