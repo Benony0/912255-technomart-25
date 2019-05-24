@@ -19,8 +19,8 @@ a {
 }
 
 .header-navigation-top,
-.header-navigation_buttons,
-.footer-floor1 {
+.footer-floor1,
+.main-menu {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
@@ -28,19 +28,84 @@ a {
     background-color: #32425c;
 }
 
+.header-navigation_middle,
+.header-navigation_buttons {
+    background-color: #f2f6f8;
+}
+
 .header-navigation-top a:hover,
 .header-navigation_buttons a:hover,
-.footer-floor1 a:hover,
 .header-navigation-top a:focus,
 .header-navigation_buttons a:focus,
-.footer-floor1 a:focus {
+.main-menu a:hover,
+.main-menu a:focus {
     color: #ffffff;
     background-color: #212a3a;
 }
 
-.menu-list {
+.menu-list,
+.social-icons-list {
     list-style: none;
 }
+
+.bread-clumbs,
+.bread-clumbs-item a {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    background-color: #ffffff;
+    text-transform: uppercase;
+}
+
+.page-title {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    color: #32425c;
+    background-color: #f2f6f8;
+    text-transform: uppercase;
+}
+
+.footer-menu1-item a,
+.footer-menu2-item a {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.footer-menu2-item a {
+    color: #ffd180;
+}
+
+.footer-menu1-item a:hover,
+.footer-menu1-item a:focus,
+.footer-menu2-item a:hover,
+.footer-menu2-item a:focus {
+    text-decoration: underline;
+}
+
+.footer-contacts,
+.footer-autor {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.footer-contacts a,
+.footer-autor a {
+    color: #ffd180;
+}
+
+.footer-contacts a:hover,
+.footer-autor a:hover,
+.footer-contacts a:focus,
+.footer-autor a:focus {
+    text-decoration: underline;
+}
+
 
 .do-order a {
     color: #ffffff;
@@ -73,4 +138,107 @@ a {
     font-size: 14px;
     line-height: 24px;
     color: #32425c;
+}
+
+.about-company h2,
+.contacts h2 {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.about-company p,
+.contacts p {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.transport-company-list {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.about-company .linker,
+.contacts .linker {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #ee3643;
+}
+
+.footer-floor2 {
+    background-color: #293449;
+}
+
+.footer-copyright {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #293449;
+}
+
+.social-icons-item a {
+    background-color: #212a3a;
+}
+
+.social-icons-item a:hover,
+.social-icons-item a:focus {
+    background-color: #ee3643;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+/* Список товаров */
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item-buttons {
+    display: none;
+}
+
+.catalog-item {
+    border: #e5e5e5 1px solid;
+}
+
+.catalog-item-name a {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.catalog-item-price .current-price-old {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    color: #999999;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.catalog-item-price .button-price {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #ee3643;
+    text-align: center;
 }
