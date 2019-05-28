@@ -1,3 +1,8 @@
+
+/**************************************************/
+/* Общие */
+/**************************************************/
+
 body {
     margin: 0;
     padding: 0;
@@ -18,8 +23,37 @@ a {
     color: #ffffff;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.page-title {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    color: #32425c;
+    background-color: #f2f6f8;
+    text-transform: uppercase;
+}
+
+/**************************************************/
+/* Шапка */
+/**************************************************/
+
+/* Общие элементы шапки */
+
+.menu-list {
+    list-style: none;
+}
+
 .header-navigation-top,
-.footer-floor1,
 .main-menu {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 17px;
@@ -43,69 +77,34 @@ a {
     background-color: #212a3a;
 }
 
-.menu-list,
-.social-icons-list {
-    list-style: none;
+.header-navigation-top a:active {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #161d29;
 }
 
-.bread-clumbs,
-.bread-clumbs-item a {
-    font-family: 'PT Sans', Arial, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    color: #000000;
-    background-color: #ffffff;
-    text-transform: uppercase;
+.header-navigation_buttons a:active,
+.main-menu a:active {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #161d29;
 }
 
-.page-title {
-    font-family: 'Cuprum', Arial, sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    color: #32425c;
-    background-color: #f2f6f8;
-    text-transform: uppercase;
+/* Отдельные элементы шапки */
+
+.logo a img {
+    background-color: #ee3643;
+    border-bottom: #b52933 6px solid;
 }
 
-.footer-menu1-item a,
-.footer-menu2-item a {
-    font-family: 'Cuprum', Arial, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    color: #ffffff;
+.logo a img:hover,
+.logo a img:focus {
+    background-color: #ca2c37;
+    border-bottom: #9a212a 6px solid;
 }
 
-.footer-menu2-item a {
-    color: #ffd180;
+.logo a img:active {
+    background-color: #ba2732;
+    border-bottom: #8e1e26 6px solid;
 }
-
-.footer-menu1-item a:hover,
-.footer-menu1-item a:focus,
-.footer-menu2-item a:hover,
-.footer-menu2-item a:focus {
-    text-decoration: underline;
-}
-
-.footer-contacts,
-.footer-autor {
-    font-family: 'Cuprum', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    color: #ffffff;
-}
-
-.footer-contacts a,
-.footer-autor a {
-    color: #ffd180;
-}
-
-.footer-contacts a:hover,
-.footer-autor a:hover,
-.footer-contacts a:focus,
-.footer-autor a:focus {
-    text-decoration: underline;
-}
-
 
 .do-order a {
     color: #ffffff;
@@ -116,6 +115,11 @@ a {
 .do-order a:focus {
     color: #ffffff;
     background-color: #5fbb2d;
+}
+
+.do-order a:active {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #518534;
 }
 
 .header-notation {
@@ -139,6 +143,60 @@ a {
     line-height: 24px;
     color: #32425c;
 }
+
+.autorisation-on-autor a,
+.autorisation-off a {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.autorisation-on-other a {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #32425c;
+    background-color: #f1f5f7;
+    text-decoration: underline;
+}
+
+.autorisation-on-autor a:hover,
+.autorisation-on-autor a:focus {
+    color: #000000;
+}
+
+.autorisation-off a:hover,
+.autorisation-off a:focus,
+.autorisation-on-other a:hover,
+.autorisation-on-other a:focus {
+    color: #ee3643;
+}
+
+.autorisation-on-autor a:active,
+.autorisation-on-other a:active,
+.autorisation-off a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* Элементы шапки вложенных страниц */
+
+.bread-clumbs,
+.bread-clumbs-item a {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    background-color: #ffffff;
+    text-transform: uppercase;
+}
+
+/**************************************************/
+/* Подвал */
+/**************************************************/
+
+/* Сервисы */
 
 .about-company h2,
 .contacts h2 {
@@ -165,7 +223,8 @@ a {
 }
 
 .about-company .linker,
-.contacts .linker {
+.contacts .linker,
+.button {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -174,8 +233,71 @@ a {
     background-color: #ee3643;
 }
 
+/* Верхняя часть подвала */
+
+.footer-floor1 {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #32425c;
+}
+
+.footer-menu1-item a,
+.footer-menu2-item a {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.footer-menu2-item a {
+    color: #ffd180;
+}
+
+.footer-menu1-item a:hover,
+.footer-menu1-item a:focus,
+.footer-menu2-item a:hover,
+.footer-menu2-item a:focus {
+    text-decoration: underline;
+}
+
+.footer-menu1-item a:active,
+.footer-menu2-item a:active {
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+/* Нижняя часть подвала */
+
 .footer-floor2 {
     background-color: #293449;
+}
+
+.footer-contacts,
+.footer-autor {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.footer-contacts a,
+.footer-autor a {
+    color: #ffd180;
+}
+
+.footer-contacts a:hover,
+.footer-autor a:hover,
+.footer-contacts a:focus,
+.footer-autor a:focus {
+    text-decoration: underline;
+}
+
+.footer-contacts a:active,
+.footer-autor a:active {
+    text-decoration: none;
+    color: #ee3643;
 }
 
 .footer-copyright {
@@ -186,20 +308,24 @@ a {
     background-color: #293449;
 }
 
+.social-icons-list {
+    list-style: none;
+}
+
 .social-icons-item a {
     background-color: #212a3a;
+    border-radius: 50%;
 }
 
 .social-icons-item a:hover,
-.social-icons-item a:focus {
+.social-icons-item a:focus,
+.social-icons-item a:active {
     background-color: #ee3643;
 }
 
-.visually-hidden {
-    display: none;
-}
-
+/**************************************************/
 /* Список товаров */
+/**************************************************/
 
 .catalog-list {
     list-style: none;

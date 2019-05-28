@@ -18,8 +18,9 @@
           <a href="index.html"><img src="img/logo-technomart.svg" width="220" height="47" alt="ТЕХНОМАРТ"></a>
         </div>
         <div class="search">
-          Поиск
-          <!--Здесь будет элемент поиска-->
+          <label>
+            <input type="text" name="search" value="" placeholder="Поиск">
+          </label>
         </div>
         <div class="bookmarks">
           <a href="#">Закладки:</a>
@@ -42,7 +43,20 @@
           <span class="header-contacts-adress">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</span>
         </section>
         <section class="header-autorisation">
-          <!--Здесь будет форма авторизации-->
+          <div class="autorisation-off visually-hidden">
+            <a href="#">Войти</a>
+            <a href="#">Регистрация</a>
+          </div>
+          <div class="autorisation-on">
+            <span class="autorisation-on-autor">
+              <a href="#">Равшан Джамшутович</a>
+            </span>
+            <span class="autorisation-on-other">
+              <a href="#">Мои заказы</a>
+              <img src="img/point.png">
+              <a href="#">Личный кабинет</a>
+            </span>
+          </div>
         </section>
 
       </section>
@@ -366,13 +380,13 @@
         <div class="footer-social-icons">
           <ul class="social-icons-list">
             <li class="social-icons-item">
-              <a href="#"><img src="img/icon-vk.svg" width="26" height="15" alt="vk"></a>
+              <a href="#" aria-label="ВКонтакте"><img src="img/icon-vk.svg" width="26" height="15" alt="vk"></a>
             </li>
             <li class="social-icons-item">
-              <a href="#"><img src="img/icon-fb.svg" width="12" height="22" alt="vk"></a>
+              <a href="#" aria-label="Facebook"><img src="img/icon-fb.svg" width="12" height="22" alt="vk"></a>
             </li>
             <li class="social-icons-item">
-              <a href="#"><img src="img/icon-insta.svg" width="21" height="21" alt="vk"></a>
+              <a href="#" aria-label="Instagram"><img src="img/icon-insta.svg" width="21" height="21" alt="vk"></a>
             </li>
           </ul>
         </div>
@@ -382,7 +396,7 @@
         </div>
         <div class="footer-autor">
           Разрработано -
-          <a href="htmlacademy.ru">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
         </div>
       </section>
 
