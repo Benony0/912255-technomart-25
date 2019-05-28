@@ -233,6 +233,22 @@ a {
     background-color: #ee3643;
 }
 
+.transport-company-list li {
+    list-style: none;
+    position: relative;
+}
+
+.transport-company-list li:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 4px;
+    top: 40%;
+    left: -33px;
+    background: #ee3643;
+}
+
 /* Верхняя часть подвала */
 
 .footer-floor1 {
@@ -329,10 +345,6 @@ a {
 
 .catalog-list {
     list-style: none;
-}
-
-.catalog-item-buttons {
-    display: none;
 }
 
 .catalog-item {
