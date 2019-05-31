@@ -23,6 +23,11 @@ a {
     color: #ffffff;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -49,8 +54,16 @@ a {
 
 /* Общие элементы шапки */
 
+.header {
+    background-color: #f3f7f8;
+}
+
 .menu-list {
     list-style: none;
+}
+
+.header-top-container {
+    background-color: #32425c;
 }
 
 .header-navigation-top,
@@ -135,6 +148,7 @@ a {
     font-size: 21px;
     line-height: 21px;
     color: #e9292a;
+    border: #ffffff 4px solid;
 }
 
 .header-contacts_adress {
@@ -199,7 +213,7 @@ a {
 /* Сервисы */
 
 .about-company h2,
-.contacts h2 {
+.about-contacts h2 {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
@@ -208,7 +222,7 @@ a {
 }
 
 .about-company p,
-.contacts p {
+.about-contacts p {
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -223,8 +237,9 @@ a {
 }
 
 .about-company .linker,
-.contacts .linker,
-.button {
+.about-contacts .linker,
+.button,
+.button-right-us {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -243,13 +258,17 @@ a {
     position: absolute;
     content: "";
     width: 25px;
-    height: 4px;
+    height: 2px;
     top: 40%;
     left: -33px;
     background: #ee3643;
 }
 
 /* Верхняя часть подвала */
+
+.footer-floor1-wrapper {
+    background-color: #32425c;
+}
 
 .footer-floor1 {
     font-family: 'Cuprum', Arial, sans-serif;
@@ -286,7 +305,8 @@ a {
 
 /* Нижняя часть подвала */
 
-.footer-floor2 {
+.footer-floor2,
+.footer-floor2-wrapper {
     background-color: #293449;
 }
 
@@ -351,6 +371,10 @@ a {
     border: #e5e5e5 1px solid;
 }
 
+.catalog-item:hover {
+    box-shadow: #293449;
+}
+
 .catalog-item-name a {
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
@@ -379,4 +403,162 @@ a {
     color: #ffffff;
     background-color: #ee3643;
     text-align: center;
+}
+
+a.button-buy {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #63a63e;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: #367315 4px solid;
+}
+
+a.button-buy:hover,
+a.button-buy:focus {
+    color: #ffffff;
+    background-color: #5fbb2d;
+    border-bottom: #367315 4px solid;
+}
+
+a.button-buy:active {
+    color: #ffffff;
+    background-color: #518534;
+    border-bottom: #518534 4px solid;
+}
+
+button.button-tobookmark {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #32425c;
+    background-color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    border: #63a63e 4px solid;
+}
+
+/**************************************************/
+/* Сетка */
+/**************************************************/
+
+/* Шапка */
+
+.header {
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-top-container {
+    width: 100%;
+}
+
+.header-navigation-top {
+    width: 940px;
+    padding: 0;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation_middle {
+    width: 940px;
+    padding-top: 45px;
+    padding-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navigation_buttons {
+    width: 940px;
+    padding-bottom: 60px;
+}
+
+.header-notation,
+.header-autorisation {
+    width: 300px;
+}
+
+.header-contacts {
+    width: 300px;
+}
+
+/* О компании */
+
+.footer-about {
+    display: flex;
+    justify-content: space-between;
+
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+}
+
+.about-company {
+    width: 540px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.about-contacts {
+    width: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Подвал */
+
+.footer-floor1-wrapper,
+.footer-floor2-wrapper {
+    width: 100%;
+}
+
+.footer-floor1,
+.footer-floor2 {
+    display: flex;
+    justify-content: space-between;
+
+    width: 940px;
+    margin: 0 auto;
+}
+
+.footer-floor1-left {
+    width: 380px;
+    margin-left: 10px;
+}
+
+.footer-floor1-right {
+    width: 550px;
+    margin-right: 10px;
+}
+
+.footer-copyright {
+    width: 300px;
+    margin-left: 10px;
+}
+
+.footer-social-icons {
+    width: 140px;
+}
+
+.footer-contacts {
+    width: 140px;
+}
+
+.footer-autor {
+    width: 140px;
+    margin-right: 10px;
+}
+
+.page-title {
+    width: 880px;
+    margin: 0 auto;
+    padding: 30px;
 }
