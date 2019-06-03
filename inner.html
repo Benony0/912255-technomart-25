@@ -15,43 +15,51 @@
 
       <div class="header-top-container">
         <nav class="header-navigation-top">
-          <div class="linker anhor logo">
-            <a href="index.html"><img src="img/logo-technomart.svg" width="220" height="47" alt="ТЕХНОМАРТ"></a>
+
+          <div class="header-navigation-top-column1">
+            <div class="linker anhor logo">
+              <a href="index.html"><img src="img/logo-technomart.svg" width="220" height="47" alt="ТЕХНОМАРТ"></a>
+            </div>
+            <div class="search">
+              <form class="form-search" method="POST" action="echo.htmlacademy.ru">
+                <label>
+                  <input type="text" name="search" value="" placeholder="Поиск">
+                </label>
+              </form>
+            </div>
           </div>
-          <div class="search">
-            <label>
-              <input type="text" name="search" value="" placeholder="Поиск">
-            </label>
+          <div class="header-navigation-top-column2">
+            <div class="header-top-anhor">
+              <a class="bookmarks" href="#">Закладки:</a>
+            </div>
+            <div class="header-top-anhor">
+              <a class="shipbasket" href="#">Корзина:</a>
+            </div>
+            <div class="header-top-anhor linker anhor do-order">
+              <a class="do-order-anhor" href="#">Оформить заказ</a>
+            </div>
           </div>
-          <div class="header-top-anhor">
-            <a class="bookmarks" href="#">Закладки:</a>
-          </div>
-          <div class="header-top-anhor">
-            <a class="shipbasket" href="#">Корзина:</a>
-          </div>
-          <div class="header-top-anhor linker anhor do-order">
-            <a class="do-order-anhor" href="#">Оформить заказ</a>
-          </div>
+
         </nav>
       </div>
 
       <section class="header-navigation_middle">
         
-        <section class="header-notation">
+        <div class="header-notation">
           Интернет-магазин строительных материалов и инструментов для ремонта
-        </section>
-        <section class="header-contacts">
+        </div>
+        <div class="header-contacts">
           <p class="header-contacts_phone">+7 (812) 555-05-55</p>
           <p class="header-contacts-adress">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
-        </section>
-        <section class="header-autorisation">
+        </div>
+        <div class="header-autorisation">
           <div class="autorisation-off visually-hidden">
-            <a href="#">Войти</a>
-            <a href="#">Регистрация</a>
+            <a class="button-autorise-quit" href="#">Войти</a>
+            <a class="button-autorise-register" href="#">Регистрация</a>
           </div>
           <div class="autorisation-on">
             <p class="autorisation-on-autor">
-              <a href="#">Равшан Джамшутович</a>
+              <a class="button-autorise-user" href="#">Равшан Джамшутович</a>
             </p>
             <p class="autorisation-on-other">
               <a href="#">Мои заказы</a>
@@ -59,7 +67,7 @@
               <a href="#">Личный кабинет</a>
             </p>
           </div>
-        </section>
+        </div>
 
       </section>
 
@@ -90,7 +98,7 @@
 
     </header>
     
-    <main class="main-conteiner">
+    <main class="maincontainer">
 
       <h1 class="page-title">Перфораторы</h1>
 
@@ -109,12 +117,14 @@
             Фильтр:
           </div>
           <div class="catalog-form-column2">
-            <div>Сортировка:</div>
-            <div>По цене</div>
-            <div>По типу</div>
-            <div>По функционалу</div>
-            <div><img src="img/icon-up-dir.svg"></div>
-            <div><img src="img/icon-down-dir.svg"></div>
+            <div class="sorting">
+              <div>Сортировка:</div>
+              <div>По цене</div>
+              <div>По типу</div>
+              <div>По функционалу</div>
+              <div><img src="img/icon-up-dir.svg"></div>
+              <div><img src="img/icon-down-dir.svg"></div>
+            </div>
           </div>
         </div>
 
