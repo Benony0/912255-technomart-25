@@ -17,25 +17,24 @@
         <nav class="header-navigation-top">
 
           <div class="header-navigation-top-column1">
-            <div class="linker anhor logo">
-              <a><img src="img/logo-technomart.svg" width="220" height="47" alt="ТЕХНОМАРТ"></a>
-            </div>
+            <a class="logo"><img src="img/logo-technomart.svg" width="108" height="18" alt="ТЕХНОМАРТ"></a>
             <div class="search">
               <form class="form-search" method="POST" action="echo.htmlacademy.ru">
                 <label>
-                  <input type="text" name="search" value="" placeholder="Поиск">
+                  <input class="input-search" type="text" name="search" value="" placeholder="Поиск">
                 </label>
               </form>
             </div>
           </div>
           <div class="header-navigation-top-column2">
             <div class="header-top-anhor">
-              <a class="bookmarks" href="#">Закладки:</a>
+              <a class="bookmarks" href="#">Закладки: 0</a>
             </div>
             <div class="header-top-anhor">
-              <a class="shipbasket" href="#">Корзина:</a>
+              <a class="shipbasket" href="#">Корзина: 0</a>
+              <!--<a class="shipbasket basket-on visually-hidden" href="#">Корзина</a>-->
             </div>
-            <div class="header-top-anhor linker anhor do-order">
+            <div class="do-order">
               <a class="do-order-anhor" href="#">Оформить заказ</a>
             </div>
           </div>
@@ -110,9 +109,7 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <span class="linker anhor">
-          <a href="#">Подробнее о компании</a>
-        </span>
+        <a class="button" href="#">Подробнее о компании</a>
       </section>
 
       <section class="about-contacts">
@@ -123,9 +120,7 @@
         <div>
           <img src="img/map.png" alt="Мы на карте" width="300" height="158">
         </div>
-        <span class="linker button">
-          <button class="button-right-us">Заблудились? Напишите нам</button>
-        </span>
+        <button class="button">Заблудились? Напишите нам</button>
       </section>
 
       <form class="form-right-us visually-hidden" method="POST" action="echo.htmlacademy.ru">
@@ -141,7 +136,7 @@
           Текст письма:
           <input type="text" name="text" value="" placeholder="В свободной форме">
         </label>
-        <button class="linker button" type="submit">Отправить</button>
+        <button class="button" type="submit">Отправить</button>
       </form>
 
     </footer>
@@ -151,8 +146,8 @@
       <div class="footer-floor1-wrapper">
 
         <section class="footer-floor1">
-          <div class="footer-floor1-left logo">
-            <a><img src="img/logo-technomart.svg" width="220" height="68" alt="ТЕХНОМАРТ"></a>
+          <div class="footer-floor1-left">
+            <a class="logo"><img src="img/logo-technomart.svg" width="136" height="21" alt="ТЕХНОМАРТ"></a>
           </div>
           <ul class="footer-floor1-right menu-list footer-menu1">
             <li class="footer-menu1-item"><a href="#">Компания</a></li>
@@ -164,7 +159,7 @@
         </section>
 
         <section class="footer-floor1">
-          <div class="footer-floor1-left">
+          <div class="footer-floor1-left footer-floor1-contacts">
             <p>г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
             <p>+7 (812) 555-05-55</p>
           </div>
