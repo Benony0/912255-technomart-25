@@ -18,9 +18,19 @@ body > * > * > * {
     border: red 1px dashed;
 }
 
-/*body > * > * > * > * {
+body > * > * > * > * {
     background-color: rgba(255, 0, 255, 0.3);
     border: #ff00ff 1px dashed;
+}
+
+body > * > * > * > * > * {
+    background-color: rgba(255, 255, 0, 0.3);
+    border: #ffff00 1px dashed;
+}
+
+body > * > * > * > * > * > * {
+    background-color: rgba(0, 255, 255, 0.3);
+    border: #00ffff 1px dashed;
 }*/
 
 body {
@@ -208,6 +218,7 @@ img {
     height: 45px;
     line-height: 45px;
     /*box-shadow: 5px 5px 0 0 #b52933;*/
+    position: relative;
 }
 
 .logo img,
@@ -215,7 +226,7 @@ img {
     background-color: #ee3643;
     box-shadow: 0 5px 0 0 #b52933;
 
-    padding: 16px 56px 18px 56px;
+    padding: 14px 56px;
 }
 
 .logo-bottom img {
@@ -300,15 +311,16 @@ img {
 
 /* Поле поиска */
 
+.form-search {
+    position: relative;
+}
+
 .input-search {
     background-color: #293449;
     border: none;
 
-    /*width: 230px;*/
     height: 43px;
     padding-left: 49px;
-    
-    position: relative;
 }
 
 .input-search:active,
@@ -317,21 +329,42 @@ img {
     outline: none;
 }
 
-.input-search::before {
+.input-search::placeholder {
+    color: #ffffff;
+}
+
+.input-search + .search-btn {
     content: "";
 
     position: absolute;
     top: 13px;
-    left: 16px;
+    left: 10px;
 
     width: 18px;
     height: 20px;
+    z-index: 1;
 
-    background-image: url("../img/icon-search.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background-color: #293449;
+    border: none;
 
     opacity: 0.3;
+}
+
+.input-search:hover + .search-btn,
+.search-btn:hover {
+    opacity: 1;
+}
+
+.input-search:active + .search-btn,
+.input-search:focus + .search-btn {
+    background-color: #ffffff;
+    outline: none;
+    opacity: 1;
+}
+
+.input-search:active + .search-btn path,
+.input-search:focus + .search-btn path {
+    fill: #ee3643;
 }
 
 /* Информативный раздел шапки */
@@ -399,6 +432,11 @@ img {
     justify-content: flex-end;
 }
 
+.autorisation-on-autor {
+    padding: 12px 67px 12px 47px;
+    background-color: #fff;
+}
+
 .autorisation-off {
     display: flex;
     justify-content: flex-end;
@@ -418,8 +456,8 @@ img {
 }
 
 .button-autorise-user {
-    padding-left: 47px;
-    padding-right: 67px;
+    padding: 0;
+    position: relative;
 }
 
 .button-autorise-quit {
@@ -445,6 +483,41 @@ img {
     background-position: 0 0;
 }
 
+.button-autorise-user .svg-icon-user,
+.button-autorise-user .svg-icon-logout {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+
+    width: 20px;
+    height: 18px;
+
+    background-color: #ffffff;
+    border: none;
+    z-index: 1;
+}
+
+.button-autorise-user .svg-icon-user {
+    left: -34px;
+}
+
+.button-autorise-user .svg-icon-logout {
+    left: 220px;
+}
+
+.button-autorise-user:hover .svg-icon-user path,
+.button-autorise-user:hover .svg-icon-logout path,
+.button-autorise-user:focus .svg-icon-user path,
+.button-autorise-user:focus .svg-icon-logout path {
+    fill: #32425c;
+}
+
+.button-autorise-user:active .svg-icon-user path,
+.button-autorise-user:active .svg-icon-logout path {
+    fill: #c5c5c5;
+}
+
 .button-autorise-quit:hover::before,
 .button-autorise-quit:focus::before {
     opacity: 1;
@@ -453,6 +526,10 @@ img {
     padding-left: 22px;
     padding-right: 22px;
     max-width: 150px;
+}
+
+.autorisation-on-other p {
+    background-color: #f1f5f7;
 }
 
 .autorisation-on-other a {
@@ -806,18 +883,44 @@ img {
 }
 
 .catalog-item-card {
+    display: block;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.catalog-item:hover,
-.catalog-item:focus {
-    box-shadow: 10px 10px 10px 0#293449;
+.catalog-item-card:hover,
+.catalog-item-card:focus {
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item-image {
+    display: block;
+}
+
+.catalog-item-buttons {
+    display: none;
+    box-sizing: border-box;
+    /*min-height: 170px;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog-item-card:hover .catalog-item-image,
+.catalog-item-card:focus .catalog-item-image {
+    display: none;
+}
+
+.catalog-item-card:hover .catalog-item-buttons,
+.catalog-item-card:focus .catalog-item-buttons {
+    display: flex;
 }
 
 .catalog-item-name {
     margin-top: 12px;
+    margin-top: auto;
 
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
@@ -826,6 +929,16 @@ img {
     color: #000000;
     background-color: #ffffff;
     text-align: center;
+}
+
+.catalog-item-price {
+    min-height: 80px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .item-new {
@@ -845,16 +958,6 @@ img {
     background-image: url("../img/new_flag.png");
     background-repeat: no-repeat;
     background-position: 0 0;
-}
-
-.catalog-item-price {
-    min-height: 80px;
-    margin-bottom: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .current-price-old {
@@ -881,6 +984,7 @@ img {
     color: #ffffff;
     background-image: url("../img/red-button.svg");
     background-repeat: no-repeat;
+    background-position: 13px 0;
     text-align: center;
 }
 
@@ -900,6 +1004,7 @@ img {
 }
 
 .button-buy {
+    margin-top: 45px;
     margin-bottom: 7px;
     color: #ffffff;
     background-color: #63a63e;
@@ -993,14 +1098,41 @@ img {
     justify-content: flex-end;
 }
 
-.catalog-form-anhor {
-    padding: 10px 20px;
+.catalog-form-images p {
+    margin: 10px;
 }
 
-.sorting img {
+.catalog-form-anhor {
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.3);
+    border-bottom: #ee3643 1px dotted;
+}
+
+.catalog-form-anhor:hover,
+.catalog-form-anhor:focus {
+    color: #000000;
+    border-bottom: #ee3643 1px solid;
+}
+
+.catalog-form-anhor:active {
+    color: #ee3643;
+    border-bottom: none;
+}
+
+.catalog-form-images .catalog-form-anhor,
+.catalog-form-images .catalog-form-anhor:hover,
+.catalog-form-images .catalog-form-anhor:focus {
+    border-bottom: none;
+}
+
+.catalog-form-text {
+    padding: 10px 120px 10px 20px;
+}
+
+/*.sorting img {
     padding-top: 13px;
     padding-right: 18px;
-}
+}*/
 
 .catalog-form-column1 h3 {
     padding-bottom: 15px;
