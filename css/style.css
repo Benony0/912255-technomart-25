@@ -3,7 +3,7 @@
 /* Общие */
 /**************************************************/
 
-/*body > * {
+body > * {
     background-color: rgba(0, 255, 0, 0.3);
     border: chartreuse 1px dashed;
 }
@@ -31,7 +31,7 @@ body > * > * > * > * > * {
 body > * > * > * > * > * > * {
     background-color: rgba(0, 255, 255, 0.3);
     border: #00ffff 1px dashed;
-}*/
+}
 
 body {
     margin: 0;
@@ -1129,11 +1129,6 @@ img {
     padding: 10px 120px 10px 20px;
 }
 
-/*.sorting img {
-    padding-top: 13px;
-    padding-right: 18px;
-}*/
-
 .catalog-form-column1 h3 {
     padding-bottom: 15px;
 
@@ -1245,6 +1240,58 @@ img {
 .page-number-active {
     color: #ffffff;
     background-color: #ee3643;
+}
+
+/**************************************************/
+/* Главная страница */
+/**************************************************/
+
+.puzzle-row {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.puzzle-item {
+    width: 300px;
+    margin-bottom: 20px;
+
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.puzzle-iten-button {
+    display: block;
+    margin-left: 25px;
+    width: 135px;
+    padding: 10px;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: #c5c5c5;
+    opacity: 0.1;
+    border-radius: 3px;
+}
+
+.puzzle-iten-button:hover,
+.puzzle-iten-button:focus {
+    opacity: 0.2;
+}
+
+.puzzle-iten-button:active {
+    opacity: 0.3;
+}
+
+.slider {
+    width: 620px;
 }
 
 /**************************************************/
