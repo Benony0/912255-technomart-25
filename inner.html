@@ -32,7 +32,6 @@
               <a class="bookmarks" href="#">Закладки: 0</a>
             </div>
             <div class="header-top-anhor">
-              <!--<a class="shipbasket visually-hidden" href="#">Корзина: 0</a>-->
               <a class="shipbasket basket-on" href="#">Корзина: 10</a>
             </div>
             <div class="do-order">
@@ -109,12 +108,6 @@
     <main class="maincontainer">
 
       <h1 class="page-title">Перфораторы</h1>
-
-      <form class="form-goodpay visually-hidden" method="POST" action="echo.htmlacademy.ru">
-        <p>Товар добавлен в корзину!</p>
-        <button class="button" type="button">Оформить заказ</button>
-        <button type="button">Продолжить покупки</button>
-      </form>
 
       <h2 class="visually-hidden">Список товаров</h2>
       <section class="catalog-body">
@@ -452,5 +445,20 @@
 
     </footer>
     
+    <form class="form-goodpay modal" method="POST" action="echo.htmlacademy.ru">
+      <div class="elements-container-top">
+        <button class="button-close" type="button">
+          <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
+        </button>
+        <p class="big-text">Товар добавлен в корзину!</p>
+      </div>
+      <div class="footer-wrapper">
+        <div class="elements-container-bottom">
+          <button class="button button-order" type="button">Оформить заказ</button>
+          <button class="button button-continue" type="button">Продолжить покупки</button>
+        </div>
+      </div>
+    </form>
+
   </body>
 </html>

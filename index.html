@@ -132,9 +132,13 @@
                 <p>Настоящие мужские игрушки</p>
               </div>
             </div>
-            <button class="button-slider-left"></button>
-            <button class="button-slider-right"></button>
-            <button class="button">Открыть каталог</button>
+            <button class="button button-open-goods">Открыть каталог</button>
+            <button class="button-slider-left">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40"><path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/></svg>
+            </button>
+            <button class="button-slider-right">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40"><path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/></svg>
+            </button>
           </div>
 
           <div class="puzzle-row2-col2">
@@ -152,7 +156,7 @@
 
       </section>
 
-      <h2>
+      <h2 class="page-title-home">
         Популярные товары
         <button class="button popular-goods-button">Все популярные товары</button>
       </h2>
@@ -244,16 +248,74 @@
 
       </section>
 
-      <h2>
+      <h2 class="page-title-home">
         Популярные производители
         <button class="button popular-workers-button">Все производители</button>
       </h2>
       <section class="popular-workers">
 
+        <ul class="catalog-list">
+          <li class="worker-item">
+            <img src="img/bosch.png" width="100%" height="100%" alt="Bosch">
+          </li>
+          <li class="worker-item">
+            <img src="img/Makita.png" width="100%" height="100%" alt="Makita">
+          </li>
+          <li class="worker-item">
+            <img src="img/DeWALT.png" width="100%" height="100%" alt="DeWALT">
+          </li>
+          <li class="worker-item">
+            <img src="img/interscol.png" width="100%" height="100%" alt="Интерскол">
+          </li>
+          <li class="worker-item">
+            <img src="img/Hitachi.png" width="100%" height="100%" alt="Hitachi">
+          </li>
+          <li class="worker-item">
+            <img src="img/LG.png" width="100%" height="100%" alt="LG">
+          </li>
+          <li class="worker-item">
+            <img src="img/AEG.png" width="100%" height="100%" alt="AEG">
+          </li>
+          <li class="worker-item">
+            <img src="img/Metabo.png" width="100%" height="100%" alt="Metabo">
+          </li>
+        </ul>
+
       </section>
 
       <h2 class="visually-hidden">Сервисы</h2>
       <section class="services">
+
+        <div class="services-container">
+
+          <div class="services-row1">
+            <h3>Сервисы</h3>
+            <p>Хороший Интернет-магазин отличается от плохого не только ценами!</p>
+            <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          </div>
+
+          <div class="services-row2">
+            <ul class="services-list">
+              <li><a class="service-item service-current-item">Доставка</a></li>
+              <li><a class="service-item">Гарантия</a></li>
+              <li><a class="service-item">Кредит</a></li>
+            </ul>
+            <div class="service-item-text modal-show">
+              <h4>Доставка</h4>
+              <p>Мы с удопольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+            </div>
+            <div class="service-item-text modal">
+              <h4>Гарантия</h4>
+              <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+            </div>
+            <div class="service-item-text modal">
+              <h4>Кредит</h4>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты придут к вам на помощь.</p>
+              <button class="button">Отправить заявку</button>
+            </div>
+          </div>
+
+        </div>
 
       </section>
 
@@ -289,22 +351,6 @@
         </div>
         <button class="button">Заблудились? Напишите нам</button>
       </section>
-
-      <form class="form-right-us visually-hidden" method="POST" action="echo.htmlacademy.ru">
-        <label>
-          Ваше имя:
-          <input type="text" name="name" value="" placeholder="Имя Фамилия">
-        </label>
-        <label>
-          Ваш e-mail:
-          <input type="text" name="email" value="" placeholder="email@example.com">
-        </label>
-        <label>
-          Текст письма:
-          <input type="text" name="text" value="" placeholder="В свободной форме">
-        </label>
-        <button class="button" type="submit">Отправить</button>
-      </form>
 
     </footer>
 
@@ -375,6 +421,44 @@
       </div>
 
     </footer>
+
+    <form class="form-right-us modal" method="POST" action="echo.htmlacademy.ru">
+      <div class="elements-container-top">
+        <button class="button-close" type="button">
+          <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
+        </button>
+        <div class="elements-row1">
+          <label>
+            Ваше имя:<br>
+            <input type="text" name="name" value="" placeholder="Имя Фамилия">
+          </label>
+          <label>
+            Ваш e-mail:<br>
+            <input type="text" name="email" value="" placeholder="email@example.com">
+          </label>
+        </div>
+        <div class="elements-row2">
+          <label>
+            Текст письма:<br>
+            <input type="text" name="text" value="" placeholder="В свободной форме">
+          </label>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <div class="elements-container-bottom">
+          <button class="button button-send" type="submit">Отправить</button>
+        </div>
+      </div>
+    </form>
+
+    <section class="map modal">
+      <div class="map-container">
+        <button class="button-close-map" type="button">
+          <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
+        </button>
+      </div>
+      <img src="img/map_popup.png" width="100%" height="100%" alt="Мы на карте">
+    </section>
 
   </body>
 </html>
