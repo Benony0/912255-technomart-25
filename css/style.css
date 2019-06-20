@@ -1673,13 +1673,12 @@ img {
     position: fixed;
     top: 100px;
     left: 50%;
-    margin-left: -480px;
+    margin-left: -485px;
     z-index: 10;
     padding: 0;
 
-    width: 960px;
-    /* box-shadow: 0 8px 16px 0 rgba(47, 42, 43, 0.5);
-    background-color: #fff; */
+    width: 970px;
+    height: 476px;
 }
 
 .map img {
