@@ -137,25 +137,33 @@
         <div class="catalog-form-body">
           <div class="catalog-form-column1">
 
-            <div class="filter-by-price">
-              <h3>Цена:</h3>
-            </div>
-            <div class="filter-by-factory">
-              <h3>Производители:</h3>
-              <p class="filter-item check-on">BOSCH</p>
-              <p class="filter-item check-off">ИНТЕРСКОЛ</p>
-              <p class="filter-item check-on">MAKITA</p>
-              <p class="filter-item check-off">DEWALT</p>
-              <p class="filter-item check-off">HITACHI</p>
-            </div>
-            <div class="filter-by-energy">
-              <h3>Питание:</h3>
-              <p class="filter-item radio-on">Аккумуляторные</p>
-              <p class="filter-item radio-off">Сетевые</p>
-            </div>
-            <div class="button-white-container">
-              <button class="button-white" type="button">Показать</button>
-            </div>
+            <form class="form-catalog-filter" method="POST" action="echo.htmlacademy.ru">
+              <div class="filter-by-price">
+                <h3>Цена:</h3>
+                <div class="price-progress">
+                  <span class="price-progress-greenline"></span>
+                  <span class="price-progress-greyline"></span>
+                  <span class="price-progress-leftpoint"></span>
+                  <span class="price-progress-rightpoint"></span>
+                </div>
+              </div>
+              <div class="filter-by-factory">
+                <h3>Производители:</h3>
+                <p class="filter-item check-on">BOSCH</p>
+                <p class="filter-item check-off">ИНТЕРСКОЛ</p>
+                <p class="filter-item check-on">MAKITA</p>
+                <p class="filter-item check-off">DEWALT</p>
+                <p class="filter-item check-off">HITACHI</p>
+              </div>
+              <div class="filter-by-energy">
+                <h3>Питание:</h3>
+                <p class="filter-item radio-on">Аккумуляторные</p>
+                <p class="filter-item radio-off">Сетевые</p>
+              </div>
+              <div class="button-white-container">
+                <button class="button-white" type="submit">Показать</button>
+              </div>
+            </form>
 
           </div>
           <div class="catalog-form-column2">
@@ -361,7 +369,7 @@
 
       <section class="catalog-annotation">
         <div class="catalog-annotation-wrapper">
-          <h2>Пара слов о Перфораторах</h2>
+          <h2 class="catalog-annotation-title">Пара слов о Перфораторах</h2>
           <p>Перфоратор - универсальный строительный инструмент. Пердназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электрические и пневматические перфораторы. Современные модели могур выполнять
             функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.
           </p>

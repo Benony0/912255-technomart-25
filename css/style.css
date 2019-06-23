@@ -1164,8 +1164,6 @@ img {
 }
 
 .catalog-form-column1 h3 {
-    padding-bottom: 15px;
-
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
@@ -1173,6 +1171,57 @@ img {
     color: #000000;
     background-color: #ffffff;
     text-transform: uppercase;
+}
+
+.price-progress {
+    position: relative;
+    margin-bottom: 10px;
+    min-height: 80px;
+
+    background-color: #f7f3ec;
+    border-radius: 3px;
+}
+
+.price-progress-greenline {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    top: 39px;
+    left: 20px;
+    background: #00ca74;
+}
+
+.price-progress-greyline {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    top: 39px;
+    left: 170px;
+    background: #d7dcde;
+}
+
+.price-progress-leftpoint,
+.price-progress-rightpoint {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    top: 38px;
+    left: 18px;
+    background: #ababab;
+    z-index: 1;
+
+    border-radius: 2px;
+    box-shadow: 8px 8px 0 8px #ffffff;
+}
+
+.price-progress-rightpoint {
+    left: 168px;
 }
 
 .filter-by-price,
@@ -1274,6 +1323,39 @@ img {
 .page-number-active {
     color: #ffffff;
     background-color: #ee3643;
+}
+
+/* Описание раздела */
+
+.catalog-annotation {
+    width: 100%;
+    background-color: #f2f6f8;
+}
+
+.catalog-annotation-wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.catalog-annotation-title {
+    padding-top: 65px;
+    padding-bottom: 35px;
+
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.catalog-annotation p {
+    padding-bottom: 70px;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
 }
 
 /**************************************************/
