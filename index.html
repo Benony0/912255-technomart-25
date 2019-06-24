@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="css/min_style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -59,7 +60,7 @@
           </div>
           <div class="autorisation-on visually-hidden">
             <p class="autorisation-on-autor">
-              <a class="button-autorise-user" href="#">
+              <a class="button-autorise-user" href="https://htmlacademy.ru/profile/id912255">
                 <span class="svg-icon-user">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
                 </span>
@@ -71,7 +72,7 @@
             </p>
             <p class="autorisation-on-other">
               <a href="#">Мои заказы</a>
-              <img src="img/point.png" alt="-">
+              <img src="img/point.png" width="4" height="4" alt="-">
               <a href="#">Личный кабинет</a>
             </p>
           </div>
@@ -132,7 +133,7 @@
                 <p>Настоящие мужские игрушки</p>
               </div>
             </div>
-            <button class="button button-open-goods">Открыть каталог</button>
+            <a class="button button-open-goods" href="inner.html">Открыть каталог</a>
             <button class="button-slider-left">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40"><path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/></svg>
             </button>
@@ -238,6 +239,7 @@
                 <p>BFG 2000</p>
               </div>
               <div class="catalog-item-price">
+                <p class="current-price-old non-price">1</p>
                 <div class="button-price">12500 Р.</div>
               </div>
             </a>
@@ -255,28 +257,44 @@
 
         <ul class="catalog-list">
           <li class="worker-item">
-            <img src="img/bosch.png" width="120" height="35" alt="Bosch">
+            <a href="#">
+              <img src="img/bosch.png" width="120" height="35" alt="Bosch">
+            </a>
           </li>
           <li class="worker-item">
-            <img src="img/Makita.png" width="125" height="40" alt="Makita">
+            <a href="#">
+              <img src="img/Makita.png" width="125" height="40" alt="Makita">
+            </a>
           </li>
           <li class="worker-item">
-            <img src="img/DeWALT.png" width="147" height="43" alt="DeWALT">
+            <a href="#">
+              <img src="img/DeWALT.png" width="147" height="43" alt="DeWALT">
+            </a>
           </li>
           <li class="worker-item">
-            <img src="img/interscol.png" width="180" height="28" alt="Интерскол">
+            <a href="#">
+              <img src="img/interscol.png" width="180" height="28" alt="Интерскол">
+            </a>
           </li>
           <li class="worker-item">
-            <img src="img/Hitachi.png" width="144" height="22" alt="Hitachi">
+            <a href="#">
+              <img src="img/Hitachi.png" width="144" height="22" alt="Hitachi">
+            </a>
           </li>
           <li class="worker-item">
-            <img src="img/LG.png" width="121" height="75" alt="LG">
+            <a href="#">
+              <img src="img/LG.png" width="121" height="75" alt="LG">
+            </a>
           </li>
           <li class="worker-item">
-            <img src="img/AEG.png" width="137" height="66" alt="AEG">
+            <a href="#">
+              <img src="img/AEG.png" width="137" height="66" alt="AEG">
+            </a>
           </li>
           <li class="worker-item">
-            <img src="img/Metabo.png" width="154" height="55" alt="Metabo">
+            <a href="#">
+              <img src="img/Metabo.png" width="154" height="55" alt="Metabo">
+            </a>
           </li>
         </ul>
 
@@ -346,7 +364,9 @@
           Вы можете забрать товар сами, заехав в наш офис:
         </p>
         <div>
-          <img src="img/map.png" alt="Мы на карте" width="300" height="158">
+          <a href="#">
+            <img src="img/map.png" alt="Мы на карте" width="300" height="158">
+          </a>
         </div>
         <button class="button button-right-us">Заблудились? Напишите нам</button>
       </section>
@@ -412,7 +432,7 @@
             </div>
             <div>
               <p>Разрработано -</p>
-              <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
+              <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
             </div>
           </div>
         </section>
@@ -459,7 +479,8 @@
       <img src="img/map_popup.png" width="970" height="476" alt="Мы на карте">
     </section>
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/min_script.js"></script>
 
   </body>
 </html>

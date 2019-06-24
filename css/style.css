@@ -3,36 +3,6 @@
 /* Общие */
 /**************************************************/
 
-/* body > * {
-    background-color: rgba(0, 255, 0, 0.3);
-    border: chartreuse 1px dashed;
-}
-
-body > * > * {
-    background-color: rgba(0, 0, 255, 0.3);
-    border: blue 1px dashed;
-}
-
-body > * > * > * {
-    background-color: rgba(255, 0, 0, 0.3);
-    border: red 1px dashed;
-}
-
-body > * > * > * > * {
-    background-color: rgba(255, 0, 255, 0.3);
-    border: #ff00ff 1px dashed;
-}
-
-body > * > * > * > * > * {
-    background-color: rgba(255, 255, 0, 0.3);
-    border: #ffff00 1px dashed;
-}
-
-body > * > * > * > * > * > * {
-    background-color: rgba(0, 255, 255, 0.3);
-    border: #00ffff 1px dashed;
-} */
-
 body {
     margin: 0;
     padding: 0;
@@ -51,6 +21,11 @@ a {
     font-size: 17px;
     line-height: 17px;
     color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 p, ul, li {
@@ -90,11 +65,6 @@ p, ul, li {
 .page-title-home {
     position: relative;
     background-color: #f9f5f0;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 .button {
@@ -451,7 +421,9 @@ img {
 }
 
 .autorisation-on-autor {
-    padding: 12px 67px 12px 47px;
+
+    width: 253px;
+    padding: 12px 0 12px 47px;
     background-color: #fff;
 }
 
@@ -461,6 +433,7 @@ img {
 }
 
 .button-autorise-user,
+.button-autorise-logout,
 .button-autorise-register,
 .button-autorise-quit {
     font-family: 'Cuprum', Arial, sans-serif;
@@ -473,8 +446,10 @@ img {
     padding-bottom: 12px;
 }
 
-.button-autorise-user {
+.button-autorise-user,
+.button-autorise-logout {
     padding: 0;
+    margin: 0;
     position: relative;
 }
 
@@ -502,11 +477,9 @@ img {
 }
 
 .button-autorise-user .svg-icon-user,
-.button-autorise-user .svg-icon-logout {
+.button-autorise-logout .svg-icon-logout {
     content: "";
-
     position: absolute;
-    top: 4px;
 
     width: 20px;
     height: 18px;
@@ -517,22 +490,24 @@ img {
 }
 
 .button-autorise-user .svg-icon-user {
+    top: 4px;
     left: -34px;
 }
 
-.button-autorise-user .svg-icon-logout {
-    left: 220px;
+.button-autorise-logout .svg-icon-logout {
+    top: 4px;
+    right: -50px;
 }
 
 .button-autorise-user:hover .svg-icon-user path,
-.button-autorise-user:hover .svg-icon-logout path,
+.button-autorise-logout:hover .svg-icon-logout path,
 .button-autorise-user:focus .svg-icon-user path,
-.button-autorise-user:focus .svg-icon-logout path {
+.button-autorise-logout:focus .svg-icon-logout path {
     fill: #32425c;
 }
 
 .button-autorise-user:active .svg-icon-user path,
-.button-autorise-user:active .svg-icon-logout path {
+.button-autorise-logout:active .svg-icon-logout path {
     fill: #c5c5c5;
 }
 
@@ -570,6 +545,7 @@ img {
 
 .autorisation-on-other a:active,
 .button-autorise-user:active,
+.button-autorise-logout:active,
 .button-autorise-register:active,
 .button-autorise-quit:active {
     color: rgba(0, 0, 0, 0.3);
@@ -681,11 +657,16 @@ img {
 .about-company p,
 .about-contacts p {
     padding-bottom: 30px;
+    width: 540px;
 
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
     color: #000000;
+}
+
+.about-contacts p {
+    width: 300px;
 }
 
 .transport-company-list {
@@ -905,14 +886,18 @@ img {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+
+    margin-left: -20px;
 }
 
 .catalog-item {
+    box-sizing: border-box;
     width: 220px;
     min-height: 320;
     margin-top: 0;
     margin-bottom: 20px;
+    margin-left: 20px;
 
     border: #e5e5e5 2px solid;
 }
@@ -984,7 +969,7 @@ img {
 
     position: absolute;
     top: 0px;
-    left: 160px;
+    left: 156px;
 
     width: 60px;
     height: 60px;
@@ -1003,6 +988,11 @@ img {
     background-color: #ffffff;
     text-align: center;
     text-decoration: line-through;
+}
+
+.non-price {
+    color: #fff;
+    background-color: #fff;
 }
 
 .button-price {
@@ -1173,6 +1163,8 @@ img {
     text-transform: uppercase;
 }
 
+/* Форма фильтрации */
+
 .price-progress {
     position: relative;
     margin-bottom: 10px;
@@ -1217,7 +1209,33 @@ img {
     z-index: 1;
 
     border-radius: 2px;
-    box-shadow: 0 0 0 8px #ffffff, 0 2px 0 8px #ababab;
+    box-shadow:
+        0 0 0 8px #ffffff,
+        0 2px 0 8px #ababab;
+}
+
+.price-interval {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form-catalog-filter input[type="text"] {
+    width: 95px;
+    min-height: 38px;
+
+    text-align: center;
+
+    background-color: #f7f3ec;
+    border: none;
+    border-radius: 3px;
 }
 
 .price-progress-rightpoint {
@@ -1236,9 +1254,6 @@ img {
 
 .filter-item {
     padding-bottom: 25px;
-    padding-left: 35px;
-
-    position: relative;
 
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 15px;
@@ -1248,39 +1263,39 @@ img {
     text-transform: uppercase;
 }
 
-.check-on::before,
-.check-off::before,
-.radio-on::before,
-.radio-off::before {
-    content: "";
-
-    position: absolute;
-    top: -3px;
-    left: 0px;
-
-    width: 24px;
-    height: 24px;
-
-    background-image: url("../img/checkbox-off.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+.radio-btn,
+.check-btn {
+    display: none;
 }
 
-.check-on::before {
-    background-image: url("../img/checkbox-on.svg");
+.radio-btn + label {
+    background: url("../img/radio-off.svg") no-repeat scroll 0 0;
+    cursor: pointer;
+    padding-bottom: 6px;
+    padding-left: 35px;
 }
 
-.radio-on::before {
-    background-image: url("../img/radio-on.svg");
+.check-btn + label {
+    background: url("../img/checkbox-off.svg") no-repeat scroll 0 0;
+    cursor: pointer;
+    padding-bottom: 6px;
+    padding-left: 35px;
 }
 
-.radio-off::before {
-    background-image: url("../img/radio-off.svg");
+.radio-btn:checked + label {
+    background: url("../img/radio-on.svg") no-repeat scroll 0 0;
+}
+
+.check-btn:checked + label {
+    background: url("../img/checkbox-on.svg") no-repeat scroll 0 0;
 }
 
 .button-white-container {
     margin-top: 60px;
 }
+
+/* Пагинатор */
+
 .paginator {
     display: flex;
     margin-top: 45px;
@@ -1423,17 +1438,17 @@ img {
     text-transform: uppercase;
     text-align: center;
 
-    background-color: rgb(197, 197, 197, 0.4);
+    background-color: rgb(0, 0, 0, 0.1);
     border-radius: 3px;
 }
 
 .puzzle-iten-button:hover,
 .puzzle-iten-button:focus {
-    background-color: rgb(197, 197, 197, 0.6);
+    background-color: rgb(0, 0, 0, 0.2);
 }
 
 .puzzle-iten-button:active {
-    background-color: rgb(197, 197, 197, 0.8);
+    background-color: rgb(0, 0, 0, 0.3);
 }
 
 .materials {
@@ -1549,11 +1564,11 @@ img {
 }
 
 .button-slider-left {
-    left: 0;
+    left: 20px;
 }
 
 .button-slider-right {
-    right: 0;
+    right: 20px;
 }
 
 /* Популярное и сервисы */
@@ -1579,6 +1594,7 @@ img {
 }
 
 .worker-item {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1587,6 +1603,7 @@ img {
     min-height: 145px;
     margin-top: 0;
     margin-bottom: 20px;
+    margin-left: 20px;
 
     border: #ebebeb 1px solid;
 }

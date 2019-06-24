@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="css/min_style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -59,19 +60,21 @@
           </div>
           <div class="autorisation-on">
             <p class="autorisation-on-autor">
-              <a class="button-autorise-user" href="#">
+              <a class="button-autorise-user" href="https://htmlacademy.ru/profile/id912255">
                 <span class="svg-icon-user">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
                 </span>
                 Равшан Джамшутович
+              </a>
+              <a class="button-autorise-logout" href="#">
                 <span class="svg-icon-logout">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
-                </span>
+                </span>&nbsp;
               </a>
           </p>
             <p class="autorisation-on-other">
               <a href="#">Мои заказы</a>
-              <img src="img/point.png" alt="-">
+              <img src="img/point.png" width="4" height="4" alt="-">
               <a href="#">Личный кабинет</a>
             </p>
           </div>
@@ -143,22 +146,48 @@
                 <div class="price-progress">
                   <span class="price-progress-greenline"></span>
                   <span class="price-progress-greyline"></span>
-                  <span class="price-progress-leftpoint"></span>
-                  <span class="price-progress-rightpoint"></span>
+                  <a class="price-progress-leftpoint" href="#"></a>
+                  <a class="price-progress-rightpoint" href="#"></a>
+                </div>
+                <div class="price-interval">
+                  <input type="text" name="minprice" value="0">
+                  <span>-</span>
+                  <input type="text" name="maxprice" value="30000">
                 </div>
               </div>
               <div class="filter-by-factory">
                 <h3>Производители:</h3>
-                <p class="filter-item check-on">BOSCH</p>
-                <p class="filter-item check-off">ИНТЕРСКОЛ</p>
-                <p class="filter-item check-on">MAKITA</p>
-                <p class="filter-item check-off">DEWALT</p>
-                <p class="filter-item check-off">HITACHI</p>
+                <p class="filter-item">
+                  <input class="check-btn" type="checkbox" name="check-bosch" id="check-bosch">
+                  <label for="check-bosch">BOSCH</label>
+                </p>
+                <p class="filter-item">
+                  <input class="check-btn" type="checkbox" name="check-interscol" id="check-interscol">
+                  <label for="check-interscol">ИНТЕРСКОЛ</label>
+                </p>
+                <p class="filter-item">
+                  <input class="check-btn" type="checkbox" name="check-makita" id="check-makita">
+                  <label for="check-makita">MAKITA</label>
+                </p>
+                <p class="filter-item">
+                  <input class="check-btn" type="checkbox" name="check-dewalt" id="check-dewalt">
+                  <label for="check-dewalt">DEWALT</label>
+                </p>
+                <p class="filter-item">
+                  <input class="check-btn" type="checkbox" name="check-hitachi" id="check-hitachi">
+                  <label for="check-hitachi">HITACHI</label>
+                </p>
               </div>
               <div class="filter-by-energy">
                 <h3>Питание:</h3>
-                <p class="filter-item radio-on">Аккумуляторные</p>
-                <p class="filter-item radio-off">Сетевые</p>
+                <p class="filter-item">
+                  <input class="radio-btn" type="radio" name="radio-anergy" id="radio-anergy-accum">
+                  <label for="radio-anergy-accum">Аккумуляторные</label>
+                </p>
+                <p class="filter-item">
+                  <input class="radio-btn" type="radio" name="radio-anergy" id="radio-anergy-net">
+                  <label for="radio-anergy-net">Сетевые</label>
+                </p>
               </div>
               <div class="button-white-container">
                 <button class="button-white" type="submit">Показать</button>
@@ -225,7 +254,7 @@
                     <p>BFG 2000</p>
                   </div>
                   <div class="catalog-item-price">
-                    <p class="current-price-old visually-hidden">12500 Р.</p>
+                    <p class="current-price-old non-price">12500 Р.</p>
                     <div class="button-price">12500 Р.</div>
                   </div>
                 </a>
@@ -286,7 +315,7 @@
                     <p>BFG 2000</p>
                   </div>
                   <div class="catalog-item-price">
-                    <p class="current-price-old visually-hidden">12500 Р.</p>
+                    <p class="current-price-old non-price">12500 Р.</p>
                     <div class="button-price">12500 Р.</div>
                   </div>
                 </a>
@@ -347,7 +376,7 @@
                     <p>BFG 2000</p>
                   </div>
                   <div class="catalog-item-price">
-                    <p class="current-price-old visually-hidden">12500 Р.</p>
+                    <p class="current-price-old non-price">12500 Р.</p>
                     <div class="button-price">12500 Р.</div>
                   </div>
                 </a>
@@ -384,7 +413,7 @@
 
         <section class="footer-floor1">
           <div class="footer-floor1-left">
-            <a class="logo"><img src="img/logo-technomart.svg" width="136" height="21" alt="ТЕХНОМАРТ"></a>
+            <a class="logo" href="index.html"><img src="img/logo-technomart.svg" width="136" height="21" alt="ТЕХНОМАРТ"></a>
           </div>
           <ul class="footer-floor1-right menu-list footer-menu1">
             <li class="footer-menu1-item"><a href="index.html">Компания</a></li>
@@ -437,7 +466,7 @@
             </div>
             <div>
               <p>Разрработано -</p>
-              <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
+              <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
             </div>
           </div>
         </section>

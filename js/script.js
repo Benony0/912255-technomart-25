@@ -3,14 +3,7 @@ var link = document.querySelector(".button-right-us");
 var popup = document.querySelector(".form-right-us");
 var close = document.querySelector(".button-close");
 
-
-// var link = document.querySelector(".login-link");
-// var popup = document.querySelector(".modal-login");
-// var close = popup.querySelector(".modal-close");
-
 var form = popup.querySelector("form");
-// var login = popup.querySelector("[name=login]");
-// var password = popup.querySelector("[name=password]");
 var username = popup.querySelector("[name=username]");
 var email = popup.querySelector("[name=email]");
 
